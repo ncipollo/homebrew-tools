@@ -8,11 +8,12 @@ class Tix < Formula
 
     def install
         ENV["GOPATH"] = buildpath
-        srcPath = buildpath/"src/github.com/ncipollo/tix"
+        src_path = buildpath/"src/github.com/ncipollo/tix"
         # Copy all files from their current location (GOPATH root)
-        # to $GOPATH/src/github.com/golift/hello-world
-        srcPath.install Dir["*",".??*"]
-        cd srcPath do
+        # to $GOPATH/src/github.com/ncipollo/tix
+        src_path.install Dir["*",".??*"]
+        cd src_path do
+            system "go", "build"
             system "make", "build"
         end
     end
