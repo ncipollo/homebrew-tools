@@ -13,8 +13,8 @@ class Tix < Formula
         # to $GOPATH/src/github.com/ncipollo/tix
         src_path.install Dir["*",".??*"]
         cd src_path do
-            system "make", "deps"
-            system "make", "build"
+            system "make", "brew"
+            # system "make", "build"
             build_path = src_path/"build/release/tix"
             bin.install build_path
         end
