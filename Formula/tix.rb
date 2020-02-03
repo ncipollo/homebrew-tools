@@ -14,6 +14,7 @@ class Tix < Formula
         src_path.install Dir["*",".??*"]
         cd src_path do
             system "make", "deps"
+            system "make", "build"
             exit(1)
             build_path = src_path/"build/release/tix"
             bin.install build_path
