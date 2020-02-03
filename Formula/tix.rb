@@ -20,4 +20,8 @@ class Tix < Formula
             bin.install build_path
         end
     end
+
+    test do 
+        assert_match "🚀 tix version #{version}", shell_output("#{bin}/tix --version")
+    end
 end
