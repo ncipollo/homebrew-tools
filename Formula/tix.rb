@@ -13,8 +13,7 @@ class Tix < Formula
         # to $GOPATH/src/github.com/golift/hello-world
         srcPath.install Dir["*",".??*"]
         cd srcPath do
-            system "pwd"
-            system "make build"
+            system "make", "build"
         end
     end
 end
