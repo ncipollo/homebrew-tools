@@ -8,6 +8,7 @@ class Tix < Formula
 
     def install
         ENV["GOPATH"] = buildpath
+        system "ls",  buildpath
         dir = buildpath/"src/github.com/ncipollo/tix"
         cd dir do
             system "pwd"
