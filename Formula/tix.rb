@@ -15,7 +15,6 @@ class Tix < Formula
         cd src_path do
             system "make", "deps"
             system "make", "build"
-            exit(1)
             build_path = src_path/"build/release/tix"
             bin.install build_path
         end
