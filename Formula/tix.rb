@@ -18,6 +18,8 @@ class Tix < Formula
             system "make", "build"
             build_path = src_path/"build/release/tix"
             bin.install build_path
+
+            zsh_completion.install "completions/_tix"
         end
     end
 
