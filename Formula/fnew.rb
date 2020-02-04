@@ -18,9 +18,9 @@ class Fnew < Formula
             system "make", "build"
             build_path = src_path/"build/release/fnew"
             bin.install build_path
+
+            zsh_completion.install "completions/_fnew"
         end
-        
-        zsh_completion.install "completions/_fnew"
     end
 
     test do 
