@@ -1,7 +1,7 @@
 class Fnew < Formula
     desc "A command line tool for creating a new project. "
     url  "https://github.com/ncipollo/fnew.git",
-        :tag => "0.8.1"
+        :tag => "0.8.2"
 
     depends_on "go" => :build
     depends_on "make" => :build
@@ -19,6 +19,8 @@ class Fnew < Formula
             build_path = src_path/"build/release/fnew"
             bin.install build_path
         end
+        
+        zsh_completion.install "completions/_fnew"
     end
 
     test do 
