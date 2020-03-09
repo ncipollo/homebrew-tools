@@ -1,7 +1,7 @@
 class Fnew < Formula
     desc "A command line tool for creating a new project. "
     url  "https://github.com/ncipollo/fnew.git",
-        :tag => "0.8.2"
+        :tag => "0.8.3"
 
     depends_on "go" => :build
     depends_on "make" => :build
