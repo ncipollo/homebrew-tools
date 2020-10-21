@@ -1,7 +1,7 @@
 class Tix < Formula
     desc "A command line utility for generating jira, etc tickets from a markdown document."
     url  "https://github.com/ncipollo/tix.git",
-        :tag => "0.9.0"
+        :tag => "0.9.1"
 
     depends_on "go" => :build
     depends_on "make" => :build
