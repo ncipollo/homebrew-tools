@@ -1,6 +1,6 @@
 class GoTix < Formula
     desc "A command line utility for generating jira, etc tickets from a markdown document."
-    url  "https://github.com/ncipollo/tix.git",
+    url  "https://github.com/ncipollo/tix-go.git",
         :tag => "0.9.6"
 
     depends_on "go" => :build
