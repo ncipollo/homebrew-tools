@@ -8,6 +8,7 @@ class KotlinTix < Formula
         java_home = Language::Java.java_home_env("11")[:JAVA_HOME]
         ENV["JAVA_HOME"] = java_home
         ENV["TIX_INSTALL_PATH"] = buildpath
+        ENV["IS_TIX_RELEASE"] = 'true'
         system "./gradlew install"
         bin.install buildpath/"tix"
 

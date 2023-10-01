@@ -1,0 +1,6 @@
+[repository]
+enable_commit = true
+
+[[transforms]]
+path = 'Formula/kotlin-tix.rb'
+replace = ':tag => "{version}"'
