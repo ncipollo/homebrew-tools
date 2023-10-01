@@ -1,5 +1,7 @@
 [repository]
+default_branch = 'master'
 enable_commit = true
+enable_tag = false
 
 [[transforms]]
 path = 'Formula/kotlin-tix.rb'
