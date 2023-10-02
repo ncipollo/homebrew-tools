@@ -1,6 +1,6 @@
 class KotlinTix < Formula
     desc "A command line utility for generating jira, etc tickets from a markdown document."
-    url  "https://github.com/ncipollo/tix-cli.git", :tag => "0.12.3"
+    url  "https://github.com/ncipollo/tix-cli.git", :tag => "0.12.4"
 
     depends_on "openjdk@11" => :build
 
