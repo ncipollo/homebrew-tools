@@ -6,3 +6,7 @@ enable_tag = false
 [[transforms]]
 path = 'Formula/kotlin-tix.rb'
 replace = ':tag => "{version}"'
+
+[[transforms]]
+path = 'Formula/tix.rb'
+replace = ':tag => "{version}"'

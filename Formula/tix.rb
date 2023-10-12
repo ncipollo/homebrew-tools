@@ -1,26 +1,18 @@
 class Tix < Formula
     desc "A command line utility for generating jira, etc tickets from a markdown document."
-    url  "https://github.com/ncipollo/tix-go.git",
-        :tag => "0.9.6"
+    url  "https://github.com/ncipollo/tix-cli.git", :tag => "0.13.0"
 
-    depends_on "go" => :build
-    depends_on "make" => :build
+    depends_on "openjdk@11" => :build
 
     def install
-        ENV["GOPATH"] = buildpath
-        ENV["VERSION"] = version
-        src_path = buildpath/"src/tix"
-        # Copy all files from their current location (GOPATH root)
-        # to $GOPATH/src/github.com/ncipollo/tix
-        src_path.install Dir["*",".??*"]
-        cd src_path do
-            system "make", "deps"
-            system "make", "build"
-            build_path = src_path/"build/release/tix"
-            bin.install build_path
+        java_home = Language::Java.java_home_env("11")[:JAVA_HOME]
+        ENV["JAVA_HOME"] = java_home
+        ENV["TIX_INSTALL_PATH"] = buildpath
+        ENV["IS_TIX_RELEASE"] = 'true'
+        system "./gradlew install"
+        bin.install buildpath/"tix"
 
-            zsh_completion.install "completions/_tix"
-        end
+        zsh_completion.install 'completions/zsh/_tix'
     end
 
     test do 
