@@ -5,12 +5,12 @@ class Tix < Formula
     
     on_linux do
         url "https://github.com/ncipollo/tix-cli/releases/download/#{version}/tix-linux"
-        sha256 "sha256:b203ae1a9e5756d5477118b4d9df1d3138610639f4252fbdea0be8bb42155cb0"
+        sha256 "b203ae1a9e5756d5477118b4d9df1d3138610639f4252fbdea0be8bb42155cb0"
     end
 
     on_macos do
         url "https://github.com/ncipollo/tix-cli/releases/download/#{version}/tix-mac"
-        sha256 "sha256:c9a3fc83c6237acee179801ed521328433aad9ad5de2d642b348831cadbdc468"
+        sha256 "c9a3fc83c6237acee179801ed521328433aad9ad5de2d642b348831cadbdc468"
     end
 
     def install
